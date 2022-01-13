@@ -1,0 +1,557 @@
+/*-----DEFINIT TOUTE LA PAGE-----*/
+
+html {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1vw;
+    margin: 0;
+    padding: 0;
+}
+
+/*-----DEFINIT LE BACKGROUND-----*/
+
+.tape {
+    z-index: -2;
+    width: 99%;
+    height: 50vh;
+    position: absolute;
+}
+
+#red1 {
+    background-color: #D1897B;
+    clip-path: polygon(100% 0, 100% 60%, 0 100%, 0 40%);
+    top: 20vh;
+}
+
+#red2 {
+    background-color: #D1897B;
+    clip-path: polygon(100% 40%, 100% 100%, 0 60%, 0 0);
+    top: 120vh;
+}
+
+#blue1 {
+    background-color: #3D858E;
+    clip-path: polygon(100% 0, 100% 60%, 0 100%, 0 40%);
+    top: 200vh;
+}
+
+#blue2 {
+    background-color: #3D858E;
+    clip-path: polygon(100% 40%, 100% 100%, 0 60%, 0 0);
+    top: 290vh;
+}
+
+#blue3 {
+    background-color: #3D858E;
+    clip-path: polygon(100% 0, 100% 60%, 0 100%, 0 40%);
+    top: 380vh;
+}
+
+#yellow1 {
+    background-color: #F6A844;
+    clip-path: polygon(100% 40%, 100% 100%, 0 60%, 0 0);
+    top: 450vh;
+}
+
+#yellow2 {
+    background-color: #F6A844;
+    clip-path: polygon(100% 0, 100% 60%, 0 100%, 0 40%);
+    top: 520vh;
+}
+
+/*-----DEFINIT LE HEADER ET LA NAV BAR-----*/
+
+/* Titre */
+
+#picture {
+    width: 18%;
+    clip-path: circle(30% at 50% 50%);
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+
+#picture img {
+    width: 100%;
+}
+
+header {
+    top: 0;
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid #ddd;
+    color: black;
+    padding: 1% 0;
+    text-align: center;
+}
+
+.photography {
+    font-family: 'Dancing Script', cursive;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(252,251,244,0.9);
+    color: black;
+    text-align: center;
+}
+
+.fas {
+    font-size: 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*-----DEFINIT ELEMENTS COMMUNS AUX MOSAIQUES-----*/
+
+main h2 {
+    position: relative;
+    top: 15%;
+    font-size: 2.8rem;
+    font-style: italic;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: -1;
+}
+
+main img {
+    width: 100%;
+}
+
+#land2:hover, #land4:hover, #land6:hover, #land8:hover, #head2:hover, #head4:hover, #head6:hover, #head8:hover {
+    background-color: #F6A844;
+}
+
+#head1:hover, #head3:hover, #head5:hover, #head7:hover, #head9:hover {
+    background-color: #D1897B;
+}
+
+#land1:hover, #land3:hover, #land5:hover, #land7:hover, #land9:hover {
+    background-color: #3D858E;
+}
+
+/*-----DEFINIT LA PARTIE LANDSCAPES-----*/
+
+#landscape {
+    display: grid;
+    grid-template-columns: repeat(3, 28%);
+    grid-template-rows: 15vh 10vh 5vh 20vh 30vh 40vh 30vh ;
+    justify-content: center;
+}
+
+div[id^="land"]:not(#landscape) {
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+}
+
+#titleLand {
+    display: flex;
+    justify-content: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+#land1 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+}
+
+#land2 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+
+#land3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 6;
+}
+
+#land4 {
+    grid-column: 2 / 3;
+    grid-row: 4 / 6;
+}
+
+#land5 {
+    grid-column: 3 / 4;
+    grid-row: 3 / 5;
+}
+
+#landscape #land6 {
+    grid-column: 1 / 3;
+    grid-row: 6 / 7;
+    padding: 1.5%;
+}
+
+#land7 {
+    grid-column: 3 / 4;
+    grid-row: 5 / 8;
+}
+
+#land8 {
+    grid-column: 1 / 2;
+    grid-row: 7 / 8;
+}
+
+#land9 {
+    grid-column: 2 / 3;
+    grid-row: 7 / 8;
+}
+
+/*-----DEFINIT LA PARTIE PORTRAITS-----*/
+
+#portrait {
+    display: grid;
+    grid-template-columns: 20% 8% 28% 8% 20%;
+    grid-template-rows: 20vh 25vh 30vh 40vh 50vh 45vh 40vh;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+div[id^=head] {
+    display: flex;
+    justify-content: center;
+}
+
+#titleHead {
+    display: flex;
+    justify-content: center;
+    grid-column: 4 / 6;
+    grid-row: 1 / 2;
+}
+
+#head1 {
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+    padding: 1.5%;
+}
+
+#head2 {
+    grid-column: 4 / 6;
+    grid-row: 2 / 5;
+    padding: 3%;
+}
+
+#head3 {
+    grid-column: 1 / 3;
+    grid-row: 3 / 6;
+    padding: 3%;
+}
+
+#head4 {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    padding: 3%;
+}
+
+#head5 {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+    padding: 3%;
+}
+
+#head6 {
+    grid-column: 3 / 6;
+    grid-row: 5 / 6;
+    padding: 1.5%;
+}
+
+#head7 {
+    grid-column: 1 / 4;
+    grid-row: 6 / 7;
+    padding: 1.5%;
+}
+
+#head8 {
+    grid-column: 4 / 6;
+    grid-row: 6 / 7;
+    padding: 3%;
+}
+
+#head9 {
+    grid-column: 2 / 5;
+    grid-row: 7 / 8;
+    padding: 1.9%;
+}
+
+/*-----DEFINIT LA BIOGRAPHIE-----*/
+
+#bio {
+    margin: 0 10% 0;
+}
+
+strong {
+    font-weight: normal;
+}
+
+#bio img{
+    width: 30%;
+    height: auto;
+    margin-right: 5%;
+}
+
+#bio div:not(#bioTexte){
+    display: flex;
+    text-align: justify;
+    margin-bottom: 4%;
+}
+
+#bio h2 {
+    margin-top: 5%;
+}
+
+#bio h3 strong {
+    font-weight: bold;
+}
+
+/*-----DEFINIT LE FOOTER-----*/
+
+fieldset {
+    background-color: #3D858E;
+    border: none;
+    border-radius: 40px;
+    margin: 0 20% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 30vw;
+}
+
+/*-----DEFINIT LE FORMULAIRE-----*/
+
+legend {
+    text-align: center;
+    background-color: white;
+    font-size: 2.2rem;
+    border-radius: 40px;
+    padding: 0 5% 0;
+    color: rgb(155, 155, 155);
+}
+
+h3 {
+    margin: 2% 0 2%;
+}
+
+.étoile {
+    text-align: center;
+    color: white;
+}
+
+.champs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    color: white;
+    align-self: center;
+    width: 30%;
+}
+
+#lastname, #firstname, #mail {
+    width: 100%;
+    margin-bottom: 2%;
+    height: 1vw;
+}
+
+/* boutons envoyer */
+
+#Envoyer {
+    background-color: rgb(155, 155, 155);
+    border: none;
+    color: white;
+    border-radius: 40px;
+    padding: 5%;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#Envoyer:hover {
+    background-color: rgb(179, 177, 177);
+}
+
+#send {
+    text-align: center;
+    margin-top: 1%;
+}
+
+/* Mentions légales */
+
+.phone {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.mail {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+    color: rgb(179, 177, 177);
+    font-size: 0.5rem;
+}
+
+.legal {
+    text-align: center;
+    color: rgb(179, 177, 177);
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 0.5rem;
+}
+
+/* boutons réseaux */
+
+#buttons {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+button[id^="button"] {
+    color: white;
+    position: relative;
+    width: 15%;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.69rem;
+}
+
+button[id^="button"]:after {
+    content: " ";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.fab {
+    position: absolute;
+    right: 0%;
+    top: 30%;
+    width: 100%;
+    height: 100%;
+}
+
+#button1 {
+    background-color: rgb(33, 117, 231);
+}
+
+#button1:hover {
+    background-color: rgb(67, 133, 255)
+}
+
+#button2 {
+    background-color: rgb(30, 168, 230);
+}
+
+#button2:hover {
+    background-color: rgb(66, 186, 255)
+}
+
+#button3 {
+    background-color: rgb(241, 89, 30);
+}
+
+#button3:hover {
+    background-color: rgb(255, 127, 53)
+}
+
+/*-----RESPONSIVE-----*/
+
+@media screen AND (max-width: 428px){
+
+    .tape{
+        display: none;
+    }
+    
+    main h2 {
+        padding: 5% 0 5%;
+        color: black;
+        font-style: normal;
+        text-align: center;
+    }
+
+    span {
+        display: none;
+    }
+    
+    #landscape, #portrait {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div[id^="land"]:not(#landscape) {
+        padding: 5% 0 5%;
+    }
+
+    #landscape #land6 {
+        padding: 5% 0 5%;
+    }
+
+    #portrait div[id^="head"] {
+        padding: 5% 0 5%;
+    }
+    
+    #land3 img, #land7 img {
+        height: 75vh;
+    }
+
+    #head2 img {
+        height: 85vh;
+    }
+    
+    #head3 img {
+        height: 90vh;
+    }
+
+    #buttons button[id^="button"] {
+        background-color: #3D858E;
+    }
+
+    #landscape div[id^="land"], #portrait div[id^="head"] {
+        background-color: #ff000000;
+    }
+    
+    #bio img {
+        display: none;
+    }
+
+    #bio #bioTexte {
+        font-size: 2rem;
+    }
+
+    #titleLand h2 {
+        background-color: #D1897B;
+        width: 100%;
+    }
+
+    #titleHead h2 {
+        background-color: #3D858E;
+        width: 100%;
+    }
+
+    #bio h2{
+        background-color: #F6A844;
+        width: 100%;
+    }
+}
+
+@media screen AND (min-width: 429px) {
+    .nav .fas {
+        display: none;
+    }
+}
