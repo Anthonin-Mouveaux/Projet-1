@@ -109,6 +109,41 @@ a {
     color: black;
 }
 
+.burger {
+	border: 0;
+	cursor: pointer;
+	display: none;
+	font-size: 22px;
+	position: relative;
+	padding: 0;
+	outline: none;
+	height: 30px;
+	width: 30px;
+}
+
+.burger:active {
+	color: #0594EC;
+	outline: none;
+}
+
+.burger .bar {
+	background-color: #0594EC;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+	height: 3px;
+	width: 20px;
+	transition: transform 0.2s ease;
+}
+
+.burger .bar:first-of-type {
+	top: 40%;
+}
+
+.burger .bar:last-of-type {
+	top: 60%;
+}
+
 /*-----DEFINIT ELEMENTS COMMUNS AUX MOSAIQUES-----*/
 
 main h2 {
@@ -472,7 +507,7 @@ button[id^="button"]:after {
 
 /*-----RESPONSIVE-----*/
 
-@media screen AND (max-width: 428px){
+@media screen AND (max-width: 768px){
 
     .tape{
         display: none;
@@ -485,9 +520,9 @@ button[id^="button"]:after {
         text-align: center;
     }
 
-    span {
+    /* span {
         display: none;
-    }
+    } */
     
     #landscape, #portrait {
         display: flex;
@@ -548,10 +583,32 @@ button[id^="button"]:after {
         background-color: #F6A844;
         width: 100%;
     }
-}
 
-@media screen AND (min-width: 429px) {
-    .nav .fas {
-        display: none;
+    .burger {
+		display: block;
+	}
+
+    nav {
+        position: fixed;
+        top: 0;
     }
+	
+    .nav {
+		background-color: #fff;
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+		flex-direction: column;
+		text-align: center;
+		position: fixed;
+		/* transform: translateX(120%); */
+		width: 25%;
+		/* transition: transform 0.3s ease-in; */
+		z-index: 100;
+        font-size: 2rem;
+        display: none;
+	}
+	
+    .nav.show {
+		/* transform: translateX(0); */
+        display: block;
+	}
 }
