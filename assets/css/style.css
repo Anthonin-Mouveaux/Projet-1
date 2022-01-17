@@ -58,6 +58,108 @@ html {
     top: 520vh;
 }
 
+/*-----DEFINIT LE BANDEAU DES COOKIES-----*/
+
+.cookieBand {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #F6A844;
+    text-align: center;
+    clip-path: polygon(19% 0%, 80% 0, 90% 25%, 90% 100%, 9% 100%, 9% 25%);
+}
+
+.cookieContent {
+    display: inline;
+    margin: 5vh 0px;
+}
+
+.cookieButton {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 3px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.close {
+    display: none;
+}
+
+/*-----DEFINIT LA MODAL DES COOKIES*/
+
+#modal {
+    position: fixed;
+    left: 32.5%;
+    top: 25vh;
+    width: 35%;
+    background-color: #f7f7f7;
+    z-index: 100;
+    border-radius: 10px;
+    padding: 20px 0px;
+    display: none;
+}
+
+#modalTitle {
+    text-align: center;
+    color: #D1897B;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#modalClose {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #f7f7f7;
+    border: none;
+}
+
+#modalClose .fa-times {
+    font-size: 1.2rem;
+    color: #7a7a7a;
+    cursor: pointer;
+}
+
+#modal > div {
+    background-color: #e0e0e0;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto;
+    margin: 3px 4%;
+    padding: 5px 0;
+}
+
+#modal div p {
+    text-align: center;
+}
+
+#modal div div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#modal div button {
+    background-color: #7a7a7a;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.modalAccept {
+    background-color: #52c902 !important;
+}
+
+.modalRefuse {
+    background-color: #c90202 !important;
+}
+
+/* #modal div div {
+    
+} */
+
 /*-----DEFINIT LE HEADER ET LA NAV BAR-----*/
 
 /* Titre */
@@ -519,10 +621,6 @@ button[id^="button"]:after {
         font-style: normal;
         text-align: center;
     }
-
-    /* span {
-        display: none;
-    } */
     
     #landscape, #portrait {
         display: flex;
@@ -602,7 +700,7 @@ button[id^="button"]:after {
 		/* transform: translateX(120%); */
 		width: 25%;
 		/* transition: transform 0.3s ease-in; */
-		z-index: 100;
+		z-index: 50;
         font-size: 2rem;
         display: none;
 	}

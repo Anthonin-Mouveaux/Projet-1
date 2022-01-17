@@ -1,7 +1,71 @@
 const burger = document.getElementById('burger');
-const ul = document.querySelector('.nav');
+const nav = document.querySelector('.nav');
+const accept = document.getElementById('accept');
+const close = document.querySelector('.cookieBand');
+const custom = document.getElementById('custom');
+const modal = document.getElementById('modal');
+const modalClose = document.getElementById('modalClose');
+const contentAccept = document.getElementById('contentAccept');
+const adAccept = document.getElementById('adAccept');
+const measureAccept = document.getElementById('measureAccept');
+const contentRefuse = document.getElementById('contentRefuse');
+const adRefuse = document.getElementById('adRefuse');
+const measureRefuse = document.getElementById('measureRefuse');
 
 burger.addEventListener('click', () => {
-	// burger.classList.toggle('show-x');
-	ul.classList.toggle('show');
+	nav.classList.toggle('show');
 });
+
+accept.addEventListener('click', () => {
+	close.classList.toggle('close');
+})
+
+custom.addEventListener('click', () => {
+	modal.style.display = 'block';
+})
+
+modalClose.addEventListener('click', () => {
+	modal.style.display = 'none';
+})
+
+contentAccept.addEventListener('click', () => {
+	if(contentRefuse.classList.contains('modalRefuse')) {
+		contentRefuse.classList.toggle('modalRefuse');
+	}
+	contentAccept.classList.toggle('modalAccept');
+})
+
+adAccept.addEventListener('click', () => {
+	if(adRefuse.classList.contains('modalRefuse')) {
+		adRefuse.classList.toggle('modalRefuse');
+	}
+	adAccept.classList.toggle('modalAccept');
+})
+
+measureAccept.addEventListener('click', () => {
+	if(measureRefuse.classList.contains('modalRefuse')) {
+		measureRefuse.classList.toggle('modalRefuse');
+	}
+	measureAccept.classList.toggle('modalAccept');
+})
+
+contentRefuse.addEventListener('click', () => {
+	if(contentAccept.classList.contains('modalAccept')) {
+		contentAccept.classList.toggle('modalAccept');
+	}
+	contentRefuse.classList.toggle('modalRefuse');
+})
+
+adRefuse.addEventListener('click', () => {
+	if(adAccept.classList.contains('modalAccept')) {
+		adAccept.classList.toggle('modalAccept');
+	}
+	adRefuse.classList.toggle('modalRefuse');
+})
+
+measureRefuse.addEventListener('click', () => {
+	if(measureAccept.classList.contains('modalAccept')) {
+		measureAccept.classList.toggle('modalAccept');
+	}
+	measureRefuse.classList.toggle('modalRefuse');
+})
