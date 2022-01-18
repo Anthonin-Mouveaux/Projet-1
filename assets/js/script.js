@@ -1,7 +1,7 @@
 const burger = document.getElementById('burger');
 const nav = document.querySelector('.nav');
 const accept = document.getElementById('accept');
-const close = document.querySelector('.cookieBand');
+const cookie = document.querySelector('.cookieBand');
 const custom = document.getElementById('custom');
 const modal = document.getElementById('modal');
 const modalClose = document.getElementById('modalClose');
@@ -17,7 +17,7 @@ burger.addEventListener('click', () => {
 });
 
 accept.addEventListener('click', () => {
-	close.classList.toggle('close');
+	cookie.classList.toggle('close');
 })
 
 custom.addEventListener('click', () => {

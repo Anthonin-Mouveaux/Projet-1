@@ -1,0 +1,52 @@
+/*-----DEFINIT TOUTE LA PAGE-----*/
+
+html {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1vw;
+    margin: 0;
+    padding: 0;
+}
+
+/*-----DEFINIT LE BACKGROUND ET TITRE-----*/
+
+.tape {
+    z-index: -2;
+    width: 99%;
+    height: 50vh;
+    position: absolute;
+}
+
+#red1 {
+    background-color: #D1897B;
+    clip-path: polygon(100% 0, 100% 60%, 0 100%, 0 40%);
+    top: 20vh;
+}
+
+#picture {
+    width: 18%;
+    clip-path: circle(30% at 50% 50%);
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+
+#picture img {
+    width: 100%;
+}
+
+header {
+    top: 0;
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid #ddd;
+    color: black;
+    padding: 1% 0;
+    text-align: center;
+}
+
+.photography {
+    font-family: 'Dancing Script', cursive;
+}
+
+.thanks {
+    display: none;
+}
