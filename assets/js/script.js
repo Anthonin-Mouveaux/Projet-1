@@ -18,6 +18,10 @@ burger.addEventListener('click', () => {
 
 accept.addEventListener('click', () => {
 	cookie.classList.toggle('close');
+	swal({
+		title: "Merci",
+		icon: "success",
+	  });
 })
 
 custom.addEventListener('click', () => {
@@ -69,3 +73,6 @@ measureRefuse.addEventListener('click', () => {
 	}
 	measureRefuse.classList.toggle('modalRefuse');
 })
+
+ScrollReveal({ reset: true }).reveal('div[id^="land"]:not(#landscape)');
+ScrollReveal({ reset: true }).reveal('div[id^=head]');
